@@ -1,8 +1,93 @@
 <!DOCTYPE html PUBLIC "-//W4C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:py="http://purl.org/kid/ns#">
-  <head> 
-    Hello world
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style>
+      /* create the frames on the PDF document */
+      @page {
+        size: a4 portrait;
+        margin: 0cm;
+
+        /*======= fixed frames for the header ========*/
+        @frame logo_frame {
+          -pdf-frame-content: logo;
+          top: 40px;
+          left: 55px;
+          width: 125px;
+          height: 55px;
+          -pdf-frame-border: 1;
+          /* for debugging the layout */
+        }
+
+        /* @frame title_frame {
+          -pdf-frame-content: title;
+          top: 70px;
+          left: 245px;
+          width: 300px;
+          height: 100px;
+          -pdf-frame-border: 1;
+          /* for debugging the layout */
+        /* }  */
+
+        @frame warning_frame {
+          -pdf-frame-content: warning;
+          top: 50px;
+          left: 595px;
+          width: 150px;
+          height: 45px;
+          -pdf-frame-border: 1;
+          /* for debugging the layout */
+        }
+
+        /*======= fixed frames for the header ========*/
+
+        /* the main frame which displays the data in the middle of the pages*/
+        /* not a fixed frame - not associated with a specific content - no '-pdf-frame-content' property*/
+        @frame content-frame {
+          top: 105px;
+          left: 100px;
+          height: 905px;
+          width: 685px;
+          -pdf-frame-border: 1;
+        /* for debugging the layout */
+        }
+        /* @frame content-frame {
+          top: 105px;
+          left: 5px;
+          height: 905px;
+          width: 100px;
+          -pdf-frame-border: 1;
+        } */
+
+        /* fixed frame for the footer*/
+        @frame footer_frame {
+          -pdf-frame-content: footer_content;
+          top: 1030px;
+          left: 35px;
+          width: 719px;
+          height: 80px;
+          -pdf-frame-border: 1;
+          /* for debugging the layout */
+        }
+      }
+    </style>
+    <!-- Set CSS Style for text -->
+    <link
+      rel="stylesheet"
+      href="./auto_cv/templates/style.css"
+      type="text/css"
+    />
+    <!-- Hello world -->
   </head>
 
-  <body>Hello Body!</body>
+  <body>
+    <div>
+      <div class="side_ribbon">
+        <span>Hi</span>
+        <span>Hi</span>
+        <span>Hi</span>
+        <div>Hey</div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -4,3 +4,6 @@
 *.egg*
 build/
 *pycache*/
+
+index.html
+output.pdf

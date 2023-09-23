@@ -1,4 +1,5 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
+from xhtml2pdf import pisa
 
 
 def create_template():
@@ -11,6 +12,11 @@ def create_template():
 
     with open("index.html", "w") as f:
         f.write(rendered_template)
+    with open("output.pdf", "w+b") as pdf_out:
+        pisa.CreatePDF(
+            src=rendered_template,
+            dest=pdf_out,
+        )
 
 
 if __name__ == "__main__":
